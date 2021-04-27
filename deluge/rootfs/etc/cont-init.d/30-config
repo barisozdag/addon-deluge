@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bashio
+
+# create config dir
+if ! bashio::fs.directory_exists "/config/deluge"; then
+    mkdir /config/deluge
+fi

@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-warning}
+
+exec \
+    /usr/bin/deluge-web -c /config/deluge\
+	-d --loglevel=${DELUGE_LOGLEVEL}

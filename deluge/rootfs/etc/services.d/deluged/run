@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+DELUGE_LOGLEVEL=${DELUGE_LOGLEVEL:-info}
+
+exec \
+	/usr/bin/deluged -c /config/deluge \
+	-d --loglevel=${DELUGE_LOGLEVEL} -l /config/deluge/deluged.log
