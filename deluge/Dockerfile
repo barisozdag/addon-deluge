@@ -17,9 +17,9 @@ RUN \
     && apt-get install -y --no-install-recommends \
         gnupg=2.2.27-2 \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C5E6A5ED249AD24C \
-    && echo "deb http://ppa.launchpad.net/deluge-team/stable/ubuntu cosmic main" >> \
+    && echo "deb http://ppa.launchpad.net/deluge-team/stable/ubuntu hirsute main" >> \
         /etc/apt/sources.list.d/deluge.list \
-    && echo "deb-src http://ppa.launchpad.net/deluge-team/stable/ubuntu cosmic main" >> \
+    && echo "deb-src http://ppa.launchpad.net/deluge-team/stable/ubuntu hirsute main" >> \
         /etc/apt/sources.list.d/deluge.list \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
