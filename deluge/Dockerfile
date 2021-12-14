@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/aarch64:4.2.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/aarch64:5.2.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -15,7 +15,7 @@ ARG RELEASE
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends \
-        gnupg=2.2.12-1+deb10u1 \
+        gnupg=2.2.27-2 \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C5E6A5ED249AD24C \
     && echo "deb http://ppa.launchpad.net/deluge-team/stable/ubuntu cosmic main" >> \
         /etc/apt/sources.list.d/deluge.list \
