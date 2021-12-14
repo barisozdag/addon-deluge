@@ -4,3 +4,5 @@ build_from:
   amd64: ghcr.io/hassio-addons/debian-base/amd64:4.2.2
   armv7: ghcr.io/hassio-addons/debian-base/armv7:4.2.2
   i386: ghcr.io/hassio-addons/debian-base/i386:4.2.2
+args:
+  release: 2.0.3-2~201906121747~ubuntu18.10.1

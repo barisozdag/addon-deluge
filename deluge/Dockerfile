@@ -11,21 +11,22 @@ ARG BUILD_ARCH=aarch64
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV PYTHON_EGG_CACHE="/config/plugins/.python-eggs"
 
+ARG RELEASE
 RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends \
         gnupg=2.2.12-1+deb10u1 \
     && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C5E6A5ED249AD24C \
-    && echo "deb http://ppa.launchpad.net/deluge-team/stable/ubuntu bionic main" >> \
+    && echo "deb http://ppa.launchpad.net/deluge-team/stable/ubuntu cosmic main" >> \
         /etc/apt/sources.list.d/deluge.list \
-    && echo "deb-src http://ppa.launchpad.net/deluge-team/stable/ubuntu bionic main" >> \
+    && echo "deb-src http://ppa.launchpad.net/deluge-team/stable/ubuntu cosmic main" >> \
         /etc/apt/sources.list.d/deluge.list \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-        deluge-common=2.0.3-2~201906121747~ubuntu18.04.1 \
-        deluged=2.0.3-2~201906121747~ubuntu18.04.1 \
-        deluge-console=2.0.3-2~201906121747~ubuntu18.04.1 \
-        deluge-web=2.0.3-2~201906121747~ubuntu18.04.1 \
+        deluge-common=${RELEASE} \
+        deluged=${RELEASE} \
+        deluge-console=${RELEASE} \
+        deluge-web=${RELEASE} \
     \
     && apt-get -y autoremove \
     && apt-get -y clean \
