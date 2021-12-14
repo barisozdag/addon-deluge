@@ -5,4 +5,4 @@ build_from:
   armv7: ghcr.io/hassio-addons/debian-base/armv7:5.2.2
   i386: ghcr.io/hassio-addons/debian-base/i386:5.2.2
 args:
-  release: 2.0.3-2~201906121747~ubuntu18.10.1
+  release: 2.0.4-0~202112121857~ubuntu21.04.1
