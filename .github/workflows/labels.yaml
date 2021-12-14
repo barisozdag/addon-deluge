@@ -11,4 +11,4 @@ jobs:
   workflows:
     uses: barisozdag/workflows/.github/workflows/labels.yaml@main
     secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ADDON_TOKEN: ${{ secrets.GITHUB_TOKEN }}
