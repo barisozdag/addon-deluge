@@ -4,6 +4,7 @@ version: dev
 slug: deluge
 description: Deluge is a lightweight, Free Software, cross-platform BitTorrent client.
 url: https://github.com/barisozdag/addon-deluge
+codenotary: baris@ozdag.net
 webui: http://[HOST]:[PORT:8112]
 arch:
   - aarch64
